@@ -48,3 +48,26 @@ html[lang="zh-CN"] .guided-case .case-heading h2{font-size:37px;line-height:1.5;
 .review-showcase-preview .review-preview-topics li>span{width:21px;height:21px;font-size:11px;border-radius:4px}
 .review-showcase-preview .review-preview-topics li>b{font-size:11px;line-height:1.6}
 @media(max-width:580px){.review-showcase-preview{padding:16px}.review-thumbnail-cta{font-size:12px;padding:12px}.review-preview-bar{font-size:10px;padding-bottom:14px}.review-showcase-preview .review-preview-topics{gap:10px}.review-showcase-preview .review-preview-topics li>b{font-size:10px}}
+/* Make every expandable case an unmistakable, keyboard-accessible action. */
+.case-depth{border:1px solid #203d63;border-radius:10px;box-shadow:0 4px 12px #203d6310}
+.case-depth>summary{padding:22px 116px 22px 24px;background:#203d63;color:#fff;font-size:16px;font-weight:600;line-height:1.65;cursor:pointer;min-height:72px;transition:background .16s}
+.case-depth>summary:after{content:'展开 ＋';position:absolute;right:18px;top:50%;transform:translateY(-50%);display:grid;place-items:center;min-width:74px;min-height:38px;padding:5px 10px;border:1px solid #ffffff80;border-radius:7px;background:#fff;color:#203d63;font-size:13px;font-weight:600;line-height:1.5}
+.case-depth[open]>summary:after{content:'收起 −'}
+.case-depth>summary:hover,.case-depth[open]>summary{background:#2e527f}
+.case-depth>summary:focus-visible,.more-work>summary:focus-visible{outline:3px solid #4e86d2;outline-offset:4px}
+.more-work{background:#e8eef6;border-top:1px solid #bdcde1;border-bottom:1px solid #bdcde1}
+.more-work>summary{min-height:128px;transition:background .16s}
+.more-work>summary:hover{background:#dce7f4}
+.more-work>summary>.eyebrow{padding:8px 12px;background:#fff;border:1px solid #bed0e5;border-radius:6px;color:#315f8c;font-weight:600;font-size:12px;letter-spacing:.04em}
+.more-work>summary>strong{font-size:22px;font-weight:600;color:#203d63}
+.more-work-hint{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;min-height:48px;padding:12px 20px;border:1px solid #203d63;border-radius:8px;background:#203d63;color:white;font-size:0;text-decoration:none;box-shadow:0 3px 8px #203d6318}
+.more-work-hint:after{content:'展开补充案例 ＋';font-size:14px;font-weight:600;line-height:1.5}
+.more-work[open] .more-work-hint:after{content:'收起补充案例 −'}
+.more-work>summary:hover .more-work-hint{background:#315b8b}
+html[lang='en'] .case-depth>summary:after{content:'Expand +'}
+html[lang='en'] .case-depth[open]>summary:after{content:'Close −'}
+html[lang='en'] .more-work-hint:after{content:'Explore more +'}
+html[lang='en'] .more-work[open] .more-work-hint:after{content:'Collapse −'}
+@media(max-width:580px){.case-depth>summary{padding:18px 100px 18px 18px;font-size:14px;min-height:76px}.case-depth>summary:after{right:12px;min-width:66px;min-height:36px;padding:5px 8px;font-size:12px}.more-work>summary{padding:28px 24px;min-height:0}.more-work>summary>strong{font-size:21px;margin:16px 0}.more-work-hint{display:flex;width:100%;margin-top:18px;min-height:50px}}
+@media(prefers-reduced-motion:reduce){.case-depth>summary,.more-work>summary{transition:none}}
+
