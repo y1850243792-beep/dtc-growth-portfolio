@@ -71,3 +71,17 @@ html[lang='en'] .more-work[open] .more-work-hint:after{content:'Collapse −'}
 @media(max-width:580px){.case-depth>summary{padding:18px;font-size:14px;min-height:0}.case-depth>summary:after{position:static;transform:none;margin-top:14px;width:100%;min-height:44px;padding:8px 12px;font-size:14px;box-sizing:border-box}.more-work>summary{padding:28px 24px;min-height:0}.more-work>summary>strong{font-size:21px;margin:16px 0}.more-work-hint{display:flex;width:100%;margin-top:18px;min-height:50px}}
 @media(prefers-reduced-motion:reduce){.case-depth>summary,.more-work>summary{transition:none}}
 
+/* A standalone invitation with Continue as the primary visual action. */
+#more-work{background:transparent;border:0}
+#more-work>summary{display:grid;grid-template-columns:240px minmax(0,1fr) 56px;gap:30px;width:calc(100% - 64px);max-width:1272px;margin:44px auto;padding:30px;min-height:176px;background:#fffdf7;border:1px solid #dfc78f;border-radius:16px;box-shadow:0 7px 24px #7252180c;box-sizing:border-box}
+#more-work>summary:hover{background:#fff8e7;border-color:#bf8c2c;box-shadow:0 9px 28px #72521818}
+#more-work>summary>.eyebrow{display:flex;align-items:center;justify-content:center;min-height:108px;padding:20px 24px;border:1px solid #c89532;border-radius:12px;background:#ffe8a6;color:#493310;font-size:32px;line-height:1.3;font-weight:700;letter-spacing:.03em;box-shadow:0 4px 10px #95661618}
+#more-work>summary:hover>.eyebrow{background:#ffde83}
+#more-work>summary>strong{font-size:19px;font-weight:500;line-height:1.8;color:#5a6571;margin:0}
+#more-work .more-work-hint{display:grid;place-items:center;width:56px;min-height:56px;padding:0;margin:0;border:1px solid #ddc589;border-radius:50%;background:#fff4d3;box-shadow:none}
+#more-work .more-work-hint:after{content:'＋';font-size:27px;line-height:1;color:#71521a}
+#more-work[open] .more-work-hint:after{content:'−'}
+#more-work[open]>summary{border-bottom:1px solid #dfc78f}
+html[lang='en'] #more-work>summary>.eyebrow{font-size:24px;letter-spacing:0}
+@media(max-width:680px){#more-work>summary{width:calc(100% - 40px);grid-template-columns:minmax(0,1fr) 48px;gap:20px;margin:30px auto;padding:22px;min-height:0}#more-work>summary>.eyebrow{min-height:80px;font-size:28px;padding:16px}#more-work>summary>strong{grid-row:2;grid-column:1/-1;font-size:15px;line-height:1.8}#more-work .more-work-hint{width:48px;min-height:48px;grid-column:2;grid-row:1}html[lang='en'] #more-work>summary>.eyebrow{font-size:21px}}
+
