@@ -1,0 +1,51 @@
+/* Results-first layout. Explicit font properties avoid invalid shorthand fallbacks. */
+.role-grid article.past { border-top-color: #355f9f; }
+.kpi-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px; padding: 0; border: 0; }
+.kpi-grid article, .kpi-grid article:first-child, .kpi-grid article:nth-child(odd), .kpi-grid article:nth-child(n+3) { padding: 32px; background: #fff; border: 1px solid #c0cee0; border-top: 5px solid #355f9f; }
+.kpi-grid article small { font-size: 13px; letter-spacing: .06em; }
+.kpi-grid article strong { font-family: Arial,'PingFang SC',sans-serif; font-size: 58px; font-weight: 600; line-height: 1.2; letter-spacing: 0; color: #203d63; margin-block: 24px 18px; }
+.kpi-grid article > span { font-size: 13px; }
+.achievement-panel { padding-top: 42px; margin-top: 52px; }
+.achievement-intro { display: block; max-width: 900px; }
+.achievement-intro h3 { font-size: 32px; margin-block: 16px 20px; }
+.achievement-intro p { max-width: 800px; font-size: 15px; }
+.achievement-metrics { gap: 22px; margin-top: 30px; }
+.achievement-metrics article { padding: 30px 26px; background: #fff; border-top: 4px solid #355f9f; }
+.achievement-metrics article strong { font-family: Arial,'PingFang SC',sans-serif; font-size: 50px; font-weight: 600; line-height: 1.2; letter-spacing: 0; color: #203d63; }
+.achievement-metrics article span { font-size: 14px; line-height: 1.8; margin-top: 20px; }
+.achievement-footer { gap: 26px; align-items: center; }
+.achievement-footer p { font-size: 12px; }
+.comparison { border-top: 5px solid #355f9f; padding: 34px; }
+.stat-head strong { font-family: Arial,'PingFang SC',sans-serif; font-size: 64px; font-weight: 600; line-height: 1.2; letter-spacing: 0; color: #203d63; }
+.stat-head small { display: block; font-size: 12px; margin-top: 16px; color: #355f9f; }
+.horizontal-bars > div > div { min-height: 54px; display: flex; align-items: center; font-size: 15px; }
+.horizontal-bars > div:last-child > div { background-color: #355f9f !important; color: #fff !important; }
+.aov-pair strong { font-family: Arial,'PingFang SC',sans-serif; font-size: 40px; font-weight: 600; line-height: 1.25; letter-spacing: 0; }
+.creative-stat.creative-hero { display: block; padding: 36px; background: #fff; border-top: 5px solid #355f9f; }
+.creative-stat.creative-hero > strong { display: flex; gap: 12px; align-items: baseline; font-family: Arial,'PingFang SC',sans-serif; font-size: 96px; font-weight: 600; line-height: 1.15; letter-spacing: 0; color: #203d63; }
+.creative-stat.creative-hero > strong > span { font-size: 48px; color: #355f9f; }
+.creative-stat.creative-hero b { display: block; font-size: 22px; margin-top: 22px; }
+.creative-stat.creative-hero p { font-size: 14px; max-width: none; margin-top: 12px; }
+.phase-grid strong { font-family: Arial,'PingFang SC',sans-serif; font-size: 32px; font-weight: 600; line-height: 1.4; letter-spacing: 0; }
+.case-proof { font-family: Arial,'PingFang SC',sans-serif; font-size: 36px; font-weight: 600; line-height: 1.3; letter-spacing: 0; }
+.case-proof small { font-family: var(--body); font-weight: 400; }
+.business-value > strong { font-family: Arial,'PingFang SC',sans-serif; font-size: 40px; font-weight: 600; line-height: 1.3; letter-spacing: 0; }
+.cross-head > div:first-child > strong { font-family: Arial,'PingFang SC',sans-serif; font-size: 80px; font-weight: 600; line-height: 1.2; letter-spacing: 0; }
+@media(max-width:1100px) { .achievement-metrics { grid-template-columns: 1fr; gap: 18px; } .achievement-metrics article { display: grid; grid-template-columns: 220px minmax(0,1fr); gap: 24px; align-items: center; } .achievement-metrics article span { margin: 0; } }
+@media(max-width:580px) {
+  .kpi-grid { grid-template-columns: 1fr; gap: 18px; }
+  .kpi-grid article, .kpi-grid article:first-child, .kpi-grid article:nth-child(odd), .kpi-grid article:nth-child(n+3) { padding: 28px 24px; }
+  .kpi-grid article strong { font-size: 44px; }
+  .achievement-metrics article { display: block; padding: 28px 24px; }
+  .achievement-metrics article strong { font-size: 46px; }
+  .achievement-metrics article span { margin-top: 16px; }
+  .achievement-intro h3 { font-size: 28px; }
+  .comparison { padding: 28px 24px; }
+  .stat-head strong { font-size: 52px; }
+  .aov-pair strong { font-size: 36px; }
+  .creative-stat.creative-hero { padding: 28px 24px; }
+  .creative-stat.creative-hero > strong { font-size: 72px; }
+  .creative-stat.creative-hero > strong > span { font-size: 36px; }
+  .cross-head > div:first-child > strong { font-size: 56px; }
+  .business-value > strong { font-size: 29px; }
+}
